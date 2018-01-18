@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Editor, EditorState, convertToRaw } from 'draft-js';
+import { convertToRaw } from 'draft-js';
 
 class ContentStateExample extends Component {
   render() {

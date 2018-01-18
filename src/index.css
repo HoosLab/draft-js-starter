@@ -24,3 +24,15 @@ body {
   flex-shrink: 0;
   flex-basis: 50%;
 }
+
+.editor-view-title, .result-view-title {
+  margin-bottom: 15px;
+}
+
+label {
+  margin-right: 10px;
+}
+
+form, button {
+  display: inline-block;
+}

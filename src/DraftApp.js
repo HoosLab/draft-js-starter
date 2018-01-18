@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Editor, EditorState, convertToRaw } from 'draft-js';
+import { Editor, EditorState } from 'draft-js';
 import ContentStateExample from './example/ContentStateExample';
 import SelectionStateExample from './example/SelectionStateExample';
 
@@ -17,7 +17,6 @@ class DraftApp extends Component {
   }
 
   onChange(editorState) {
-    
     return this.setState({editorState});
   }
 
@@ -25,11 +24,11 @@ class DraftApp extends Component {
     return (
       <div className="editor-container">
         <div className="result-view">
-          <div>Result</div>
-          <SelectionStateExample editorState={this.state.editorState}/>
+          <div className="result-view-title">Result</div>
+          <SelectionStateExample editorState={this.state.editorState} onChange={this.onChange}/>
         </div>
         <div className="editor-view" onClick={()=>this.domEditor.focus()}>
-          <div>Editor</div>
+          <div className="editor-view-title">Editor</div>
           <Editor
             ref={this.setDomEditorRef}
             editorState={this.state.editorState}

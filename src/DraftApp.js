@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Editor, EditorState, convertToRaw } from 'draft-js';
+import ContentStateExample from './example/ContentStateExample';
+import SelectionStateExample from './example/SelectionStateExample';
 
 class DraftApp extends Component {
 
@@ -24,7 +26,7 @@ class DraftApp extends Component {
       <div className="editor-container">
         <div className="result-view">
           <div>Result</div>
-          <div>{JSON.stringify(convertToRaw(this.state.editorState.getCurrentContent()), null, '\t')}</div>
+          <SelectionStateExample editorState={this.state.editorState}/>
         </div>
         <div className="editor-view" onClick={()=>this.domEditor.focus()}>
           <div>Editor</div>

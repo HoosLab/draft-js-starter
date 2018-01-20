@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Editor, EditorState } from 'draft-js';
 import ContentStateExample from './example/ContentStateExample';
 import SelectionStateExample from './example/SelectionStateExample';
+import EntityExample from './example/EntityExample';
 
 class DraftApp extends Component {
 
@@ -25,7 +26,7 @@ class DraftApp extends Component {
       <div className="editor-container">
         <div className="result-view">
           <div className="result-view-title">Result</div>
-          <SelectionStateExample editorState={this.state.editorState} onChange={this.onChange}/>
+          <EntityExample editorState={this.state.editorState} onChange={this.onChange}/>
         </div>
         <div className="editor-view" onClick={()=>this.domEditor.focus()}>
           <div className="editor-view-title">Editor</div>
